@@ -26,22 +26,14 @@
           "foundSignupDate": ""
         }
       ],
-      "url": "https://some-endpoint.com/execute"
+      "url": "https://krispykreme-chatbot.herokuapp.com/execute"
     }
   },
   "configurationArguments": {
-    "save": {
-      "url": "URI/for/your/activity/save"
-    },
     "publish": {
-      "url": "URI/for/your/activity/publish"
-    },
-    "validate": {
-      "url": "URI/for/your/activity/validate"
-    },
-    "stop": {
-      "url": "URI/for/your/activity/stop"
+      "url": "https://krispykreme-chatbot.herokuapp.com/publish"
     }
+
   },
   "wizardSteps": [
     { "label": "Step 1", "key": "step1" },
