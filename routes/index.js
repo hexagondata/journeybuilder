@@ -4,9 +4,8 @@ var activity = require('./activity');
 
 exports.index = function (req, res) {
     console.log('index request!');
-    console.log(req.session);
 
-    if (req.session.token) {
+    if (req.session) {
         res.render('index', {
             title: 'Journey Builder Activity',
             results: activity.logExecuteData,
