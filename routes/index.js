@@ -4,16 +4,17 @@ var activity = require('./activity');
 
 exports.index = function (req, res) {
     console.log('index request!');
+    console.log(req.session);
 
-    if (!req.session.token) {
-        res.render('index', {
-            title: 'Unauthenticated',
-            errorMessage: 'This app may only be loaded via Salesforce Marketing Cloud',
-        });
-    } else {
+    if (req.session.token) {
         res.render('index', {
             title: 'Journey Builder Activity',
             results: activity.logExecuteData,
+        });
+    } else {
+          res.render('index', {
+            title: 'Unauthenticated',
+            errorMessage: 'This app may only be loaded via Salesforce Marketing Cloud',
         });
     }
 };
