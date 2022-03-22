@@ -1,35 +1,25 @@
-'use strict';
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser')
 
-var express = require('express');
-var bodyParser = require('body-parser');
-var errorhandler = require('errorhandler');
-var http = require('http');
-var path = require('path');
-var request = require('request');
-var routes = require('./routes');
-var activity = require('./routes/activity');
+const submodules = [
+    require('./modules/discount-code/app/app'),
+    require('./modules/discount-redemption-split/app/app'),
+];
 
-var app = express();
+const app = express();
 
-app.set('port', process.env.PORT || 3000);
-app.use(bodyParser.raw({ type: 'application/jwt' }));
-//app.use(bodyParser.urlencoded({ extended: true }));
+// parse application/json
+app.use(bodyParser.json())
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.set('port', (process.env.PORT || 8080));
+app.use('/', express.static(path.join(__dirname, 'home')));
+app.use('/assets', express.static(path.join(__dirname, '/node_modules/@salesforce-ux/design-system/assets')));
 
-if ('development' == app.get('env')) {
-  app.use(errorhandler());
-}
+submodules.forEach((sm) => sm(app, {
+    rootDirectory: __dirname,
+}));
 
-app.get('/', routes.index);
-app.post('/login', routes.login);
-app.post('/logout', routes.logout);
-
-app.post('/save/', activity.save);
-app.post('/validate/', activity.validate);
-app.post('/publish/', activity.publish);
-app.post('/execute/', activity.execute);
-
-http.createServer(app).listen(app.get('port'), function () {
-  console.log('Express server listening on port ' + app.get('port'));
+app.listen(app.get('port'), function() {
+    console.log(`Express is running at localhost: ${app.get('port')}`);
 });
