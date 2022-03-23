@@ -157,7 +157,10 @@ module.exports = function discountCodeExample(app, options) {
         }
 
         // example: https://developer.salesforce.com/docs/atlas.en-us.noversion.mc-app-development.meta/mc-app-development/example-rest-activity.htm
-        const discountInArgument = getInArgument('discount') || 'nothing';
+        // Entonces aqui agregar phone2, nombrey promocion
+const discountInArgument = getInArgument('Phone2') || 'nothing';
+const discountInArgument = getInArgument('Nombre') || 'nothing';
+const discountInArgument = getInArgument('Promocion') || 'nothing';
         const responseObject = {
             discount: discountInArgument,
             discountCode: generateRandomCode() + `-${discountInArgument}%`

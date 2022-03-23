@@ -64,9 +64,6 @@ module.exports = function configJSON(req) {
       arguments: {
         execute: {
           inArguments: [
-            {"type":"kkpromo50chatbot11y13mar","users":
-            [{"phone":"+<phone>","params":
-            {"Nombre":"<Nombre>","Promocion":"<Promocion>"}}]}
           ],
           outArguments: [{
             discountCode: {
