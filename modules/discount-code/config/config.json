@@ -3,7 +3,7 @@ module.exports = function configJSON(req) {
     workflowApiVersion: '1.1',
     metaData: {
       // the location of our icon file
-      icon: `images/icon.svg`,
+      icon: `modules/discount-codemages/icon.svg`,
       category: 'customer'
     },
     // For Custom Activity this must say, "REST"
