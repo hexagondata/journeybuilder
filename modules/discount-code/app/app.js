@@ -12,7 +12,7 @@
 //    - stop
 
 const express = require('express');
-const configJSON = require('modules/discount-code/config/config-json');
+const configJSON = require('modules/discount-code/config/config.js');
 
 // setup the discount-code example app
 module.exports = function discountCodeExample(app, options) {
