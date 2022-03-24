@@ -165,7 +165,7 @@ const discountInArgument = getInArgument('Promocion') || 'nothing';
             discount: discountInArgument,
             discountCode: generateRandomCode() + `-${discountInArgument}%`
         };
-
+//AQUI VA LA PARTE DE YALO
         console.log('Response Object', JSON.stringify(responseObject));
 
         return res.status(200).json(responseObject);
