@@ -12,7 +12,7 @@
 //    - stop
 
 const express = require('express');
-const configJSON = require('app/modules/discount-code/config/config.js');
+const configJSON = require('/kkchatbot/modules/discount-code/config/config.js');
 
 // setup the discount-code example app
 module.exports = function discountCodeExample(app, options) {
@@ -35,7 +35,7 @@ module.exports = function discountCodeExample(app, options) {
     });
 
     // setup config.json route
-    app.get('app/modules/discount-code/config/config.json', function(req, res) {
+    app.get('/kkchatbot/modules/discount-code/config/config.json', function(req, res) {
         // Journey Builder looks for config.json when the canvas loads.
         // We'll dynamically generate the config object with a function
         return res.status(200).json(configJSON(req));
