@@ -4,7 +4,7 @@ module.exports = function configJSON(req) {
     metaData: {
       // the location of our icon file
       icon: `images/icon.svg`,
-"key": "8c1e0767-4785-4a85-95ad-974790bc713c"
+"key": "85d04ab7-e546-4a53-b862-ca3831aed734"
       category: 'customer'
     },
     // For Custom Activity this must say, "REST"
