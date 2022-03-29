@@ -5,7 +5,7 @@ module.exports = function configJSON(req) {
       // the location of our icon file
       icon: `images/icon.svg`,
 "key": "85d04ab7-e546-4a53-b862-ca3831aed734"
-      category: 'customer'
+      category: 'message'
     },
     // For Custom Activity this must say, "REST"
     type: 'REST',
