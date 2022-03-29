@@ -13,7 +13,7 @@
 
 const express = require('express');
 const configJSON = require('../config/config-json');
-
+alert(configJSON);
 // setup the discount-code example app
 module.exports = function discountCodeExample(app, options) {
     const moduleDirectory = `${options.rootDirectory}/modules/discount-code`;
