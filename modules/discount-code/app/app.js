@@ -13,6 +13,7 @@
 
 const express = require('express');
 const configJSON = require('../config/config-json');
+console.log('FGM Mi ruta');
 console.log(configJSON);
 // setup the discount-code example app
 module.exports = function discountCodeExample(app, options) {
