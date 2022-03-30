@@ -17,7 +17,7 @@
         "execute": {
            "inArguments":[],
           "outArguments": [],
-          "url": "https://journeybuilder2.herokuapp.com/journeybuilder/execute",
+          "url": "https://krispykreme-chatbot.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
             "body": "",
             "header": "",
