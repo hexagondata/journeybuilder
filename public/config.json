@@ -61,17 +61,7 @@
     "schema": {
         "arguments": {
             "execute": {
-                "inArguments": [
-{
-          "Phone": "{{Contact.Attribute.Phone2}}"
-        },
-        {
-          "Nombre": "{{Contact.Attribute.Nombre}}"
-        },
-        {
-          "Promocion": "{{Contact.Attribute.Promocion}}""
-        }
-}],
+                "inArguments": [],
                 "outArguments": []
             }
         }
