@@ -113,7 +113,7 @@ const enviarMensaje = async (type,phone,promocion) => {
 console.log(response)
 }
 
-api.enviarMensaje('kkpremiososcars2022',inArguments.Phone,inArguments.Promocion);
+enviarMensaje('kkpremiososcars2022',inArguments.Phone,inArguments.Promocion);
 
         } else {
             console.error('inArguments invalid.');
