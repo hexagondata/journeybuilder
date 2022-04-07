@@ -6,6 +6,27 @@ const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 var util = require('util');
 var http = require('https');
+//Agregado por Krispy Kreme
+const axios = require("axios")
+const url = "https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications"
+const enviarMensaje = async (type,phone,promocion) => {
+
+    let body = {
+        type,
+        users:[{
+            phone,
+            params:{
+                PROMOCION:promocion
+            }
+        }]}
+
+    let response = await axios.post(url,body,{headers:{
+        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE"
+    }})
+console.log(response)
+}
+
+//Agregado por Krispy Kreme
 
 exports.logExecuteData = [];
 
@@ -87,8 +108,13 @@ exports.execute = function (req, res) {
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             
-            logData(req);
-            res.send(200, 'Execute');
+            //logData(req);
+            //res.send(200, 'Execute');
+	//Aqui iria la fincion
+
+		api.enviarMensaje('kkpremiososcars2022',inArguments.Phone,inArguments.Promocion);
+
+
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();
