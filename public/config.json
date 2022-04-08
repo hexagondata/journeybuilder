@@ -28,22 +28,22 @@
     },
     "configurationArguments": {
       "save": {
-        "url": "https://journeybuilder2.herokuapp.com/journeybuilder/save",
+        "url": "https://krispykreme-chatbot.herokuapp.com/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://journeybuilder2.herokuapp.com/journeybuilder/publish",
+        "url": "https://krispykreme-chatbot.herokuapp.com/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://journeybuilder2.herokuapp.com/journeybuilder/stop",
+        "url": "https://krispykreme-chatbot.herokuapp.com/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://journeybuilder2.herokuapp.com/journeybuilder/validate",
+        "url": "https://krispykreme-chatbot.herokuapp.com/validate",
         "verb": "POST",
         "useJwt": true
       }
