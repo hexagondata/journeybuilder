@@ -85,7 +85,7 @@ axios.defaults.headers = {
 Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
 }
 axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
-{"type":"kkpremiososcars2022","users":[{"phone":"+<phone>","params":{"PROMOCION":"<PROMOCION>"}}]})
+{"type":"kkpremiososcars2022","users":[{"phone":"+525578453580","params":{"PROMOCION":"2x1"}}]})
 .then(response => {
 console.log('Response', response.data)
 })
