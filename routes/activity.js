@@ -97,8 +97,17 @@ const enviarMensaje = async (type,phone,promocion) => {
     }})
 console.log(response)
 }
+axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications', {
+firstName: 'Finn',
+lastName: 'Williams'
+})
+.then((response) => {
+console.log(response);
+}, (error) => {
+console.log(error);
+});
 
-enviarMensaje('kkpremiososcars2022',inArguments.Phone,inArguments.Promocion);
+//enviarMensaje('kkpremiososcars2022',inArguments.Phone,inArguments.Promocion);
 
 //KRISP
 
