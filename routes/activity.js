@@ -80,23 +80,7 @@ if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
 var decodedArgs = decoded.inArguments[0];
 logData(req);
 
-//KRISPYKREME
-const enviarMensaje = async (type,phone,promocion) => {
 
-    let body = {
-        type,
-        users:[{
-            phone,
-            params:{
-                Promocion:promocion
-            }
-        }]}
-
-    let response = await axios.post(url,body,{headers:{
-        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE"
-    }})
-console.log(response)
-}
 axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications', {
 firstName: 'Finn',
 lastName: 'Williams'
