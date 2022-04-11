@@ -69,7 +69,7 @@
 
                     {
 
-                    "Nombre": "{{Contact.Attribute.__Prueba __.Nombre}}"
+                    "Nombre": "{{Contact.Attribute.Prueba Chatbot.Nombre}}"
 
                     },
 
