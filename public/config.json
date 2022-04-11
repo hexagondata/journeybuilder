@@ -63,19 +63,19 @@
             "execute": {
                 "inArguments": [   {
 
-                    "Phone": "{{Contact.Attribute.__Prueba Chatbot__.Phone2}}"
+                    "Phone": "{{Event.DEAudience-89f76f91-3dff-4649-207e-85d1323a887b.Phone2}}"
 
                     },
 
                     {
 
-                    "Nombre": "{{Contact.Attribute.Prueba Chatbot.Nombre}}"
+                    "Nombre": "{{Event.DEAudience-89f76f91-3dff-4649-207e-85d1323a887b.Nombre}}"
 
                     },
 
                     {
 
-                    "Promocion": "{{Contact.Attribute.__Prueba Chatbot__.Promocion}}"
+                    "Promocion": "{{Event.DEAudience-89f76f91-3dff-4649-207e-85d1323a887b.Promocion}}"
 
                     }],
                 "outArguments": []
