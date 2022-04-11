@@ -63,7 +63,7 @@
             "execute": {
                 "inArguments": [   {
 
-                    "Phone": "{{Contact.Attribute.Phone2}}"
+                    "Phone": "{{Contact.Attribute.Phone}}"
 
                     },
 
