@@ -63,19 +63,19 @@
             "execute": {
                 "inArguments": [   {
 
-                    "Phone": "{{Contact.Attribute.Phone}}"
+                    "Phone": "{{Contact.Attribute."Prueba Chatbot"."Phone2"}}"
 
                     },
 
                     {
 
-                    "Nombre": "{{Contact.Attribute.Nombre}}"
+                    "Nombre": "{{Contact.Attribute."Prueba Chatbot"."Nombre"}}"
 
                     },
 
                     {
 
-                    "Promocion": "{{Contact.Attribute.Promocion}}"
+                    "Promocion": "{{Contact.Attribute."Prueba Chatbot"."Promocion"}}"
 
                     }],
                 "outArguments": []
