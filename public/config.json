@@ -63,19 +63,19 @@
             "execute": {
                 "inArguments": [   {
 
-                    "Phone": "{{Contact.Attribute.Phone}}"
+                    "Phone": "{{Event.DEAudience-069e4e99-c391-8d00-061f-63320752bf89.\"Phone2\"}}"
 
                     },
 
                     {
 
-                    "Nombre": "{{Contact.Attribute.Nombre}}"
+                    "Nombre": "{{Event.DEAudience-069e4e99-c391-8d00-061f-63320752bf89.\"Nombre\"}}"
 
                     },
 
                     {
 
-                    "Promocion": "{{Contact.Attribute.Promocion}}"
+                    "Promocion": "{{Event.DEAudience-069e4e99-c391-8d00-061f-63320752bf89.\"Promocion\"}}"
 
                     }],
                 "outArguments": []
