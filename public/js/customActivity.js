@@ -98,6 +98,7 @@ define([
 
         console.log("payload-->",payload);
         connection.trigger('updateActivity', payload);
+        console.log("termino save")
     }
 
 
