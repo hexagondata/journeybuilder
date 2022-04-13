@@ -63,19 +63,19 @@
             "execute": {
                 "inArguments": [   {
 
-                    "Phone": "{{Event.DEAudience-c516d129-bb65-d641-f942-4e4053894133.\"Phone2\"}}"
+                    "Phone": "{{Contact.Prueba Chatbot-19AD3E2B-FA9F-4F1C-AA9C-BF405C06F60A.\"Phone2\"}}"
 
                     },
 
                     {
 
-                    "Nombre": "{{Event.DEAudience-c516d129-bb65-d641-f942-4e4053894133.\"Nombre\"}}"
+                    "Nombre": "{{Contact.Prueba Chatbot-19AD3E2B-FA9F-4F1C-AA9C-BF405C06F60A.\"Nombre\"}}"
 
                     },
 
                     {
 
-                    "Promocion": "{{Event.DEAudience-c516d129-bb65-d641-f942-4e4053894133.\"Promocion\"}}"
+                    "Promocion": "{{Contact.Prueba Chatbot-19AD3E2B-FA9F-4F1C-AA9C-BF405C06F60A.\"Promocion\"}}"
 
                     }],
                 "outArguments": []
