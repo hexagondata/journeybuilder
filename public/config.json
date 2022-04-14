@@ -17,7 +17,7 @@
         "execute": {
            "inArguments":[],
           "outArguments": [],
-          "url": "https://krispykreme-chatbot.herokuapp.com/execute",
+          "url": "https://testjourney3.herokuapp.com/execute",
            "verb": "POST",
             "body": "",
             "header": "",
@@ -28,22 +28,22 @@
     },
     "configurationArguments": {
       "save": {
-        "url": "https://krispykreme-chatbot.herokuapp.com/save",
+        "url": "https://testjourney3.herokuapp.com/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://krispykreme-chatbot.herokuapp.com/publish",
+        "url": "https://testjourney3.herokuapp.com/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://krispykreme-chatbot.herokuapp.com/stop",
+        "url": "https://testjourney3.herokuapp.com/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://krispykreme-chatbot.herokuapp.com/validate",
+        "url": "https://testjourney3.herokuapp.com/validate",
         "verb": "POST",
         "useJwt": true
       }
