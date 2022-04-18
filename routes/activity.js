@@ -69,17 +69,20 @@ res.send(200, 'Save');
 
 exports.execute = function (req, res) {
 // example on how to decode JWT
+
 console.log("entro a execute")
-JWT(req.body, process.env.jwtSecret, (err, decoded) => {
-// verification error -> unauthorized request
-console.log("entro a token")
-if (err) {
-console.error(err);
-return res.status(401).end();
-}
-if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
+console.log("request",req)
+console.log("response",res)
+// JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+// // verification error -> unauthorized request
+// console.log("entro a token")
+// if (err) {
+// console.error(err);
+// return res.status(401).end();
+// }
+// if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
 // decoded in arguments
-        var inArguments = decoded.inArguments[0];
+        var inArguments = req.inArguments[0];
 
         logData(req);
         console.log("argumentos---->",inArguments)
