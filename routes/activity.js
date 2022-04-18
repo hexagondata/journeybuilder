@@ -70,6 +70,7 @@ res.send(200, 'Save');
 exports.execute = function (req, res) {
 // example on how to decode JWT
 console.log("resbody----->",res.body)
+console.log("reqbody----->",req.body)
 console.log("entro a execute")
 
 // console.log("response",res)
