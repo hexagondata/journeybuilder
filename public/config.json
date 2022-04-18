@@ -18,7 +18,7 @@
         "execute": {
            "inArguments":[],
           "outArguments": [],
-          "url": "https://testjourney3.herokuapp.com/execute",
+          "url": "https://testjourney3.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
             "body": "",
             "header": "",
