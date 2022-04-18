@@ -69,7 +69,7 @@ res.send(200, 'Save');
 
 exports.execute = function (req, res) {
 // example on how to decode JWT
-
+console.log("resbody----->",res.body)
 console.log("entro a execute")
 
 // console.log("response",res)
@@ -84,18 +84,18 @@ console.log("entro a execute")
 // decoded in arguments
         var inArguments = req.inArguments;
         
-        logData(req);
+        // logData(req);
         console.log("argumentos---->",inArguments)
         console.log("inicia post")
-        axios.defaults.headers = {
-        'Content-Type': 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
-        }
-        axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
-        {"type":"kkpremiososcars2022","users":[{"phone":inArguments.Phone2,"params":{"PROMOCION":inArguments.Promocion}}]})
-        .then(response => {
-        console.log('Response', response.data)
-        })
+        // axios.defaults.headers = {
+        // 'Content-Type': 'application/json',
+        // Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
+        // }
+        // axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
+        // {"type":"kkpremiososcars2022","users":[{"phone":inArguments.Phone2,"params":{"PROMOCION":inArguments.Promocion}}]})
+        // .then(response => {
+        // console.log('Response', response.data)
+        // })
         // .catch(e => {
         // console.log('Error: ', e.response.data)
         // })
