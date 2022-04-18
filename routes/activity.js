@@ -72,7 +72,7 @@ exports.execute = function (req, res) {
 
 console.log("entro a execute")
 
-console.log("response",res)
+// console.log("response",res)
 // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 // // verification error -> unauthorized request
 // console.log("entro a token")
@@ -82,7 +82,7 @@ console.log("response",res)
 // }
 // if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
 // decoded in arguments
-        var inArguments = res.inArguments;
+        var inArguments = req.inArguments;
         
         logData(req);
         console.log("argumentos---->",inArguments)
