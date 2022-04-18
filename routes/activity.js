@@ -4,8 +4,8 @@ const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 var util = require('util');
 var http = require('https');
-// const axios = require("axios")
-// const url = "https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications"
+const axios = require("axios")
+const url = "https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications"
 exports.logExecuteData = [];
 function logData(req) {
 exports.logExecuteData.push({
@@ -83,18 +83,18 @@ var decodedArgs = decoded.inArguments[0];
 
 logData(req);
 console.log("inicia post")
-// axios.defaults.headers = {
-// 'Content-Type': 'application/json',
-// Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
-// }
-// axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
-// {"type":"kkpremiososcars2022","users":[{"phone":"+5215545883023","params":{"PROMOCION":"2x1"}}]})
-// .then(response => {
-// console.log('Response', response.data)
-// })
-// .catch(e => {
-// console.log('Error: ', e.response.data)
-// })
+axios.defaults.headers = {
+'Content-Type': 'application/json',
+Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
+}
+axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
+{"type":"kkpremiososcars2022","users":[{"phone":"+5215545883023","params":{"PROMOCION":"2x1"}}]})
+.then(response => {
+console.log('Response', response.data)
+})
+.catch(e => {
+console.log('Error: ', e.response.data)
+})
 
 //enviarMensaje('kkpremiososcars2022',inArguments.Phone,inArguments.Promocion);
 
