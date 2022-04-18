@@ -68,22 +68,18 @@
             "execute": {
                 "inArguments": [  
                     {
-
                     "Nombre": {
                       "dataType": "String",
                       "isNullable": false,
                       "direction": "out"   
                     }
-
                     },
                     {
-
                       "Phone": {
                         "dataType": "String",
                         "isNullable": false,
                         "direction": "out"   
                       }
-  
                       }],
                 "outArguments": []
             }
