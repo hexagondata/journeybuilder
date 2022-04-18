@@ -82,7 +82,7 @@ console.log("response",res)
 // }
 // if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
 // decoded in arguments
-        var inArguments = req.inArguments[0];
+        var inArguments = res.inArguments[0];
 
         logData(req);
         console.log("argumentos---->",inArguments)
@@ -107,11 +107,11 @@ console.log("response",res)
 
 
         res.send(200, 'Execute');
-    } else {
-        console.error('inArguments invalid.');
-        return res.status(400).end();
-        }
-        });
+    // } else {
+    //     console.error('inArguments invalid.');
+    //     return res.status(400).end();
+    //     }
+    //     });
 };
 /*
 * POST Handler for /publish/ route of Activity.
