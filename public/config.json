@@ -16,14 +16,15 @@
     },
     "arguments": {
         "execute": {
-           "inArguments":[],
+           "inArguments":[
+             {
+               "Nombre":"Eduardo silve"
+             }
+           ],
           "outArguments": [],
           "url": "https://testjourney4.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
-            "body": "",
-            "header": "",
-            "format": "json",
-            "useJwt": true,
+            "useJwt": false,
             "timeout": 10000
         }
     },
@@ -62,29 +63,10 @@
     "schema": {
         "arguments": {
             "execute": {
-                "inArguments": [   {
-
-                  "Phone": {
-                    "dataType": "String",
-                    "isNullable": false,
-                    "direction": "out"   
-                }
-
-                    },
-
+                "inArguments": [  
                     {
 
                     "Nombre": {
-                      "dataType": "String",
-                      "isNullable": false,
-                      "direction": "out"   
-                    }
-
-                    },
-
-                    {
-
-                    "Promocion": {
                       "dataType": "String",
                       "isNullable": false,
                       "direction": "out"   
