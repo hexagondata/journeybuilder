@@ -64,19 +64,31 @@
             "execute": {
                 "inArguments": [   {
 
-                    "Phone": "5545883023"
+                  "Phone": {
+                    "dataType": "String",
+                    "isNullable": false,
+                    "direction": "out"   
+                }
 
                     },
 
                     {
 
-                    "Nombre": "Eduardo silve"
+                    "Nombre": {
+                      "dataType": "String",
+                      "isNullable": false,
+                      "direction": "out"   
+                    }
 
                     },
 
                     {
 
-                    "Promocion": "2x1 donas krispy"
+                    "Promocion": {
+                      "dataType": "String",
+                      "isNullable": false,
+                      "direction": "out"   
+                    }
 
                     }],
                 "outArguments": []
