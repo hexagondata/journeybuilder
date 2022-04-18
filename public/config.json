@@ -64,19 +64,19 @@
             "execute": {
                 "inArguments": [   {
 
-                    "Phone": "{{Contact.Prueba Chatbot-19AD3E2B-FA9F-4F1C-AA9C-BF405C06F60A.\"Phone2\"}}"
+                    "Phone": "{{InteractionDefaults.Phone2}}"
 
                     },
 
                     {
 
-                    "Nombre": "{{Contact.Prueba Chatbot-19AD3E2B-FA9F-4F1C-AA9C-BF405C06F60A.\"Nombre\"}}"
+                    "Nombre": "{{InteractionDefaults.Nombre}}"
 
                     },
 
                     {
 
-                    "Promocion": "{{Contact.Prueba Chatbot-19AD3E2B-FA9F-4F1C-AA9C-BF405C06F60A.\"Promocion\"}}"
+                    "Promocion": "{{InteractionDefaults.Promocion}}"
 
                     }],
                 "outArguments": []
