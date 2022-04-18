@@ -70,16 +70,16 @@ res.send(200, 'Save');
 exports.execute = function (req, res) {
 // example on how to decode JWT
 console.log("entro a execute")
-JWT(req.body, process.env.jwtSecret, (err, decoded) => {
-// verification error -> unauthorized request
-console.log("entro a token")
-if (err) {
-console.error(err);
-return res.status(401).end();
-}
-if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-// decoded in arguments
-var decodedArgs = decoded.inArguments[0];
+// JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+// // verification error -> unauthorized request
+// console.log("entro a token")
+// if (err) {
+// console.error(err);
+// return res.status(401).end();
+// }
+// if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
+// // decoded in arguments
+// var decodedArgs = decoded.inArguments[0];
 
 logData(req);
 console.log("inicia post")
@@ -92,9 +92,9 @@ axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy
 .then(response => {
 console.log('Response', response.data)
 })
-.catch(e => {
-console.log('Error: ', e.response.data)
-})
+// .catch(e => {
+// console.log('Error: ', e.response.data)
+// })
 
 //enviarMensaje('kkpremiososcars2022',inArguments.Phone,inArguments.Promocion);
 
@@ -103,11 +103,11 @@ console.log('Error: ', e.response.data)
 
 
 res.send(200, 'Execute');
-} else {
-console.error('inArguments invalid.');
-return res.status(400).end();
-}
-});
+// } else {
+// console.error('inArguments invalid.');
+// return res.status(400).end();
+// }
+// });
 };
 /*
 * POST Handler for /publish/ route of Activity.
