@@ -19,6 +19,9 @@
            "inArguments":[
              {
                "Nombre":"Eduardo silve"
+             },
+             {
+               "Phone":"+5215545883023"
              }
            ],
           "outArguments": [],
@@ -72,7 +75,16 @@
                       "direction": "out"   
                     }
 
-                    }],
+                    },
+                    {
+
+                      "Phone": {
+                        "dataType": "String",
+                        "isNullable": false,
+                        "direction": "out"   
+                      }
+  
+                      }],
                 "outArguments": []
             }
         }
