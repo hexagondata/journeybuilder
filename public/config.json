@@ -64,19 +64,19 @@
             "execute": {
                 "inArguments": [   {
 
-                    "Phone": "{{InteractionDefaults.Phone2}}"
+                    "Phone": "5545883023"
 
                     },
 
                     {
 
-                    "Nombre": "{{InteractionDefaults.Nombre}}"
+                    "Nombre": "Eduardo silve"
 
                     },
 
                     {
 
-                    "Promocion": "{{InteractionDefaults.Promocion}}"
+                    "Promocion": "2x1 donas krispy"
 
                     }],
                 "outArguments": []
