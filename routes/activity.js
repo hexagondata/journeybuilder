@@ -107,7 +107,7 @@ if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
         console.error('inArguments invalid.');
         return res.status(400).end();
         }
-        // });
+        });
 };
 /*
 * POST Handler for /publish/ route of Activity.
