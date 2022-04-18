@@ -77,37 +77,37 @@ console.log("entro a execute")
 // console.error(err);
 // return res.status(401).end();
 // }
-// if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-// // decoded in arguments
-// var decodedArgs = decoded.inArguments[0];
+if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
+// decoded in arguments
+        var inArguments = decoded.inArguments[0];
 
-logData(req);
-console.log("inicia post")
-axios.defaults.headers = {
-'Content-Type': 'application/json',
-Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
-}
-axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
-{"type":"kkpremiososcars2022","users":[{"phone":"+5215545883023","params":{"PROMOCION":"2x1"}}]})
-.then(response => {
-console.log('Response', response.data)
-})
-// .catch(e => {
-// console.log('Error: ', e.response.data)
-// })
+        logData(req);
+        console.log("inicia post")
+        axios.defaults.headers = {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
+        }
+        axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
+        {"type":inArguments.Promocion,"users":[{"phone":inArguments.Phone2,"params":{"PROMOCION":inArguments.Nombre}}]})
+        .then(response => {
+        console.log('Response', response.data)
+        })
+        // .catch(e => {
+        // console.log('Error: ', e.response.data)
+        // })
 
-//enviarMensaje('kkpremiososcars2022',inArguments.Phone,inArguments.Promocion);
+        //enviarMensaje('kkpremiososcars2022',inArguments.Phone,inArguments.Promocion);
 
-//KRISP
+        //KRISP
 
 
 
-res.send(200, 'Execute');
-// } else {
-// console.error('inArguments invalid.');
-// return res.status(400).end();
-// }
-// });
+        res.send(200, 'Execute');
+    } else {
+        console.error('inArguments invalid.');
+        return res.status(400).end();
+        }
+        // });
 };
 /*
 * POST Handler for /publish/ route of Activity.

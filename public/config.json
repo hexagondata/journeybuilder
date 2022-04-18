@@ -18,11 +18,15 @@
         "execute": {
            "inArguments":[
              {
-               "Nombre":"Eduardo silve"
+               "Promocion":"{{Contact.Attribute.Promocion}}"
              },
              {
-               "Phone":"+5215545883023"
+               "Phone":"{{Contact.Attribute.Phone2}}"
+             },
+             {
+               "Nombre":"{{Contact.Attribute.Nombre}}"
              }
+
            ],
           "outArguments": [],
           "url": "https://testjourney4.herokuapp.com/journeybuilder/execute",
@@ -68,12 +72,12 @@
             "execute": {
                 "inArguments": [  
                     {
-                    "Nombre": {
+                    "Promocion": {
                       "dataType": "String",
                       "isNullable": false,
                       "direction": "out"   
                     }
-                    
+
                     },
                     {
                       "Phone": {
@@ -81,7 +85,14 @@
                         "isNullable": false,
                         "direction": "out"   
                       }
-                      }],
+                      },
+                      {
+                        "Nombre": {
+                          "dataType": "String",
+                          "isNullable": false,
+                          "direction": "out"   
+                        }
+                        }],
                 "outArguments": []
             }
         }
