@@ -18,13 +18,13 @@
         "execute": {
            "inArguments":[
              {
-               "Promocion":"{{Contact.Attribute.Promocion}}"
+               "Promocion":"2x1"
              },
              {
-               "Phone":"{{Contact.Attribute.Phone2}}"
+               "Phone":"+525545883023"
              },
              {
-               "Nombre":"{{Contact.Attribute.Nombre}}"
+               "Nombre":"eduardo silve"
              }
 
            ],
