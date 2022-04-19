@@ -27,7 +27,7 @@ protocol: req.protocol,
 secure: req.secure,
 originalUrl: req.originalUrl
 });
-console.log("body: " + req.body);
+console.log("body: " + util.inspect(req.body).toString());
 console.log("headers: " + req.headers);
 console.log("trailers: " + req.trailers);
 console.log("method: " + req.method);
