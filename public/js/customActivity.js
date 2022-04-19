@@ -90,14 +90,14 @@ define([
         // var postcardURLValue = $('#postcard-url').val();
         // var postcardTextValue = $('#postcard-text').val();
         console.log("entro a save")
-        console.log("payloadAntes-->",payload.arguments.execute.inArguments);
+        console.log("payloadAntes-->",payload['arguments'].execute.inArguments.length);
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens
         }];
         
         payload['metaData'].isConfigured = true;
 
-        console.log("payloadDespues-->",payload.arguments.execute.inArguments);
+        console.log("payloadDespues-->",payload['arguments'].execute.inArguments.length);
         connection.trigger('updateActivity', payload);
         console.log("termino save")
     }
