@@ -27,7 +27,7 @@ protocol: req.protocol,
 secure: req.secure,
 originalUrl: req.originalUrl
 });
-console.log("body: " + util.inspect(req.body).toString());
+console.log("body: " + util.inspect(req.body));
 console.log("headers: " + req.headers);
 console.log("trailers: " + req.trailers);
 console.log("method: " + req.method);
@@ -66,29 +66,27 @@ res.send(200, 'Save');
 /*
 * POST Handler for /execute/ route of Activity.
 */
-var Events = "{{Event}}"
-var Contacts = "{{Contact}}"
+
 exports.execute = function (req, res) {
 // example on how to decode JWT
 console.log("resbody----->",res.body)
 console.log("reqbody----->",req.body)
 console.log("entro a execute")
-console.log("objetoEvent",Events)
-console.log("objeto",Contacts)
+
 // console.log("response",res)
-JWT(req.body, process.env.jwtSecret, (err, decoded) => {
-// verification error -> unauthorized request
-console.log("entro a token")
-if (err) {
-console.error(err);
-return res.status(401).end();
-}
-if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-decoded in arguments
-        var inArguments = decoded.inArguments[0];
+// JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+// // verification error -> unauthorized request
+// console.log("entro a token")
+// if (err) {
+// console.error(err);
+// return res.status(401).end();
+// }
+// if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
+// decoded in arguments
+        // var inArguments = decoded.inArguments[0];
         
         // logData(req);
-        // console.log("argumentos---->",inArguments)
+        console.log("argumentos---->",inArguments)
         console.log("inicia post")
         // axios.defaults.headers = {
         // 'Content-Type': 'application/json',
@@ -110,11 +108,11 @@ decoded in arguments
 
 
         res.send(200, 'Execute');
-} else {
-        console.error('inArguments invalid.');
-        return res.status(400).end();
-        }
-        });
+// } else {
+//         console.error('inArguments invalid.');
+//         return res.status(400).end();
+//         }
+//         });
  };
 /*
 * POST Handler for /publish/ route of Activity.
