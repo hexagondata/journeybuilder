@@ -47,7 +47,7 @@ define([
     }
 
     function initialize(data) {
-        console.log("data-->",data);
+        console.log("dataArguments-->",data.arguments);
         if (data) {
             payload = data;
         }
