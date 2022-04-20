@@ -21,7 +21,7 @@
              "Promocion":"2x1"
            },
            {
-             "Phone":"{{Contact}}"
+             "Phone":"{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
            },
            {
              "Nombre":"{{InteractionDefaults.MobileNumber}}"
