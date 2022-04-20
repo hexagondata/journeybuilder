@@ -1,20 +1,20 @@
 {
-    "workflowApiVersion": "1.1",
-    "key" : "85d04ab7-e546-4a53-b862-ca3831aed734",
-    "metaData": {
-        "icon": "images/icon.png",
-        "iconSmall": "images/iconSmall.png",
-        "category": "message"
-    },
-    "type": "REST",
-    "lang": {
-        "en-US": {
-            "name": "Yalo Activity",
-          "description": "Yalo Activity",
-          "step1Label": "Configure Activity"
-        }
-    },
-    "arguments": {
+  "workflowApiVersion": "1.1",
+  "key" : "85d04ab7-e546-4a53-b862-ca3831aed734",
+  "metaData": {
+      "icon": "images/icon.png",
+      "iconSmall": "images/iconSmall.png",
+      "category": "message"
+  },
+  "type": "REST",
+  "lang": {
+      "en-US": {
+          "name": "Journey Builder",
+        "description": "custom Journey Builder",
+        "step1Label": "Configure Activity"
+      }
+  },
+  "arguments": {
       "execute": {
          "inArguments":[
            {
@@ -26,75 +26,75 @@
            {
              "Nombre":"eduardo silve"
            }
-          ],
-          "outArguments": [],
-          "url": "https://sfmc-custom-activity-hexagon.herokuapp.com/execute",
-           "verb": "POST",
-            "useJwt": false,
-            "format":"json",
-            "timeout": 10000
-        }
-    },
-    "configurationArguments": {
-      "save": {
-        "url": "https://sfmc-custom-activity-hexagon.herokuapp.com/save",
-          "verb": "POST",
-        "useJwt": true
-       },
-       "publish": {
-        "url": "https://sfmc-custom-activity-hexagon.herokuapp.com/publish",
-           "verb": "POST",
-        "useJwt": true
-       },
-      "stop": {
-        "url": "https://sfmc-custom-activity-hexagon.herokuapp.com/stop",
-           "verb": "POST",
-        "useJwt": true
-      },
-      "validate": {
-        "url": "https://sfmc-custom-activity-hexagon.herokuapp.com/validate",
-        "verb": "POST",
-        "useJwt": true
-      }
-    },
-    "wizardSteps": [
-        { "label": "Configure Activity", "key": "step1" }
-    ],
-    "userInterfaces": {
-        "configModal": {
-            "height": 400,
-            "width": 1000,
-          "fullscreen": false
-        }
-    },
-    "schema": {
-        "arguments": {
-            "execute": {
-              "inArguments": [  
-                {
-                "Promocion": {
-                  "dataType": "String",
-                  "isNullable": false,
-                  "direction": "out"   
-                }
 
-                },
-                {
-                  "Phone": {
+         ],
+        "outArguments": [],
+        "url": "https://testjourney4.herokuapp.com/journeybuilder/execute",
+         "verb": "POST",
+          "useJwt": false,
+          "timeout": 10000
+      }
+  },
+  "configurationArguments": {
+    "save": {
+      "url": "https://testjourney4.herokuapp.com/journeybuilder/save",
+        "verb": "POST",
+      "useJwt": true
+     },
+     "publish": {
+      "url": "https://testjourney4.herokuapp.com/journeybuilder/publish",
+         "verb": "POST",
+      "useJwt": true
+     },
+    "stop": {
+      "url": "https://testjourney4.herokuapp.com/journeybuilder/stop",
+         "verb": "POST",
+      "useJwt": true
+    },
+    "validate": {
+      "url": "https://testjourney4.herokuapp.com/journeybuilder/validate",
+      "verb": "POST",
+      "useJwt": true
+    }
+  },
+  "wizardSteps": [
+      { "label": "Configure Activity", "key": "step1" }
+  ],
+  "userInterfaces": {
+      "configModal": {
+          "height": 400,
+          "width": 1000,
+        "fullscreen": false
+      }
+  },
+  "schema": {
+      "arguments": {
+          "execute": {
+              "inArguments": [  
+                  {
+                  "Promocion": {
                     "dataType": "String",
                     "isNullable": false,
                     "direction": "out"   
                   }
+
                   },
                   {
-                    "Nombre": {
+                    "Phone": {
                       "dataType": "String",
                       "isNullable": false,
                       "direction": "out"   
                     }
-                    }],
-            "outArguments": []
-            }
-        }
-    }
+                    },
+                    {
+                      "Nombre": {
+                        "dataType": "String",
+                        "isNullable": false,
+                        "direction": "out"   
+                      }
+                      }],
+              "outArguments": []
+          }
+      }
+  }
 }
