@@ -22,7 +22,7 @@ define([
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
-
+        connection.trigger('requestSchema');
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
         // connection.trigger('requestInteraction');
@@ -107,7 +107,12 @@ define([
             'Nombre': "{{InteractionDefaults.MobileNumber}}"
         }];
 
-
+        connection.on('requestedSchema', function (data) {
+            // save schema
+            console.log('*** Schema ***', JSON.stringify(data['schema']));
+         });
+         
+         
         payload['metaData'].isConfigured = true;
 
         console.log("payloadDespues-->",payload['arguments'].execute.inArguments);
