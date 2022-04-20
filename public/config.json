@@ -24,7 +24,7 @@
              "Phone":"{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
            },
            {
-             "Nombre":"{{InteractionDefaults.MobileNumber}}"
+             "Nombre":"{{Event.DEAudience-46508215-9a48-2824-aa14-2786f1b9a872.\"Phone\"}}"
            }
 
          ],

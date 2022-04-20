@@ -91,6 +91,7 @@ decoded in arguments
         console.log("arguments",inArguments)
         logData(req);
         console.log("inicia post")
+        console.log("{{Event.DEAudience-46508215-9a48-2824-aa14-2786f1b9a872.\"Phone\"}}")
         // axios.defaults.headers = {
         // 'Content-Type': 'application/json',
         // Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
