@@ -29,7 +29,7 @@
 
            ],
           "outArguments": [],
-          "url": "https://testjourney4.herokuapp.com/journeybuilder/execute",
+          "url": "https://sfmc-custom-activity-hexagon.herokuapp.com/execute",
            "verb": "POST",
             "useJwt": true,
             "timeout": 10000
