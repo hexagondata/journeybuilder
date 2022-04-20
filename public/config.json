@@ -18,10 +18,10 @@
       "execute": {
          "inArguments":[
            {
-             "Promocion":"{{Event.DEAudience-46508215-9a48-2824-aa14-2786f1b9a872.\"Promocion\"}}"
+             "Promocion":"{{Contact.Key}}"
            },
            {
-             "Phone":"{{Event.DEAudience-46508215-9a48-2824-aa14-2786f1b9a872.\"Phone\"}}"
+             "Phone":"{{Contact.Key}}"
            },
            {
              "Nombre":"{{Contact.Key}}"
