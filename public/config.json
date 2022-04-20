@@ -18,13 +18,13 @@
         "execute": {
            "inArguments":[
              {
-               "Promocion":"2x1"
+               "Promocion":"{{Contact.Default.Phone}}"
              },
              {
-               "Phone": "{{InteractionDefaults.MobileNumber}}"
+               "Phone": "{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
              },
              {
-               "Nombre":"eduardo silve"
+               "Nombre":"{Contact}"
              }
 
            ],
