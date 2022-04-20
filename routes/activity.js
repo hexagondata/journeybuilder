@@ -78,6 +78,10 @@ console.log("reqbody -->", req.body);
 // var mobile = "{{InteractionDefaults.MobileNumber}}"
 // console.log("contact3",mobile)
 // console.log("response",res)
+console.log("EXECUTE HAS BEEN RUN");
+console.log('KEY - > ' + process.env.jwtSecret);
+
+
 JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 // verification error -> unauthorized request
 console.log("entro a token")
@@ -85,6 +89,7 @@ if (err) {
 console.error(err);
 return res.status(401).end();
 }
+console.log("decoded",decoded)
 if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
 decoded in arguments
         var inArguments = decoded.inArguments[0];
