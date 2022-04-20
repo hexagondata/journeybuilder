@@ -28,6 +28,8 @@ secure: req.secure,
 originalUrl: req.originalUrl
 });
 console.log("body: " + util.inspect(req.body));
+let json = JSON.stringify(req.body);
+console.log("json",json);
 console.log("headers: " + req.headers);
 console.log("trailers: " + req.trailers);
 console.log("method: " + req.method);
@@ -44,6 +46,7 @@ console.log("stale: " + req.stale);
 console.log("protocol: " + req.protocol);
 console.log("secure: " + req.secure);
 console.log("originalUrl: " + req.originalUrl);
+
 }
 /*
 * POST Handler for / route of Activity (this is the edit route).
@@ -71,8 +74,6 @@ exports.execute = function (req, res) {
 // example on how to decode JWT
 // console.log("resbody----->",res)
 // console.log("reqbody----->",req)
-
-console.log("payload-> con Promocion",decoded.inArguments[0]);
 
 
 // console.log("response",res)
