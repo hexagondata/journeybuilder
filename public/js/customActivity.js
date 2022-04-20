@@ -104,7 +104,7 @@ define([
             'Phone': "{{Contact.Attribute.chatbotCustomers.Phone2}}"
         },
         {
-            'Nombre': "{{InteractionDefaults.Nombre}}"
+            'Nombre': "{{Contact.Attribute.chatbotCustomers.Nombre}}"
         }];
 
 
