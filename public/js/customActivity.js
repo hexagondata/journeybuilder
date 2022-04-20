@@ -61,7 +61,7 @@ define([
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        console.log("inArguments---->",inArguments[2].Nombre);
+        console.log("inArguments---->",inArguments);
 
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
