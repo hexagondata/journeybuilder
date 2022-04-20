@@ -28,7 +28,7 @@
           "outArguments": [],
           "url": "https://sfmc-custom-activity-hexagon.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
-            "useJwt": true,
+            "useJwt": false,
             "format":"json",
             "timeout": 10000
         }
