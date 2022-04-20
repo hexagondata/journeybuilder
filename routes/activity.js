@@ -69,13 +69,12 @@ res.send(200, 'Save');
 
 exports.execute = function (req, res) {
 // example on how to decode JWT
-console.log("resbody----->",res.body)
-console.log("reqbody----->",req.body)
+console.log("resbody----->",res)
+console.log("reqbody----->",req)
 
-console.log("contact",inArguments.DXPHONENUMBER)
-console.log("contact2",inArguments.MobileNumber)
-console.log("contact3",inArguments.Key)
-console.log("contact4",inArguments[0])
+console.log("payload-> con Promocion",payload['arguments'].execute.inArguments[0].Promocion);
+console.log("payload--> con Phone",payload['arguments'].execute.inArguments[1].Phone);
+console.log("payload---> con Nombre",payload['arguments'].execute.inArguments[2].Nombre);
 // console.log("response",res)
 // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 // // verification error -> unauthorized request
