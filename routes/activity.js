@@ -109,8 +109,7 @@ if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
         .catch(e => {
         console.log('Error: ', e.response.data)
         })
-        let data = res.data;
-        console.log("data possttt",data);
+
         //enviarMensaje('kkpremiososcars2022',inArguments.Phone,inArguments.Promocion);
 
         //KRISP
