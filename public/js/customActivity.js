@@ -97,6 +97,17 @@ define([
         //    "tokens": authTokens
         //}];
         
+        payload['arguments'].execute.inArguments = [{
+            'Promocion': "{{Contact.key}}"
+        },
+        {
+            'Phone': "{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
+        },
+        {
+            'Nombre': "{{InteractionDefaults.MobileNumber}}"
+        }];
+
+
         payload['metaData'].isConfigured = true;
 
         console.log("payloadDespues-->",payload['arguments'].execute.inArguments.length);
