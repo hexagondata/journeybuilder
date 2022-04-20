@@ -91,7 +91,6 @@ return res.status(401).end();
 }
 console.log("decoded",decoded)
 if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-decoded in arguments
         var inArguments = decoded.inArguments[0];
         console.log("arguments",inArguments)
         logData(req);
@@ -102,7 +101,7 @@ decoded in arguments
         Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
         }
         axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
-        {"type":"kkpremiososcars2022","users":[{"phone":inArguments.Phone2,"params":{"PROMOCION":inArguments.Promocion}}]})
+        {"type":"kkpremiososcars2022","users":[{"phone":"+52"+decoded.inArguments.Nombre,"params":{"PROMOCION":decoded.inArguments.Promocion}}]})
         .then(response => {
         console.log('Response', response.data)
         })
