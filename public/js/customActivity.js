@@ -101,10 +101,10 @@ define([
             'Promocion': "{{Contact.Key}}"
         },
         {
-            'Phone': "{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
+            'Phone': "{{InteractionDefaults.MobileNumber}}"
         },
         {
-            'Nombre': "{{InteractionDefaults.MobileNumber}}"
+            'Nombre': "{{InteractionDefaults.Name}}"
         }];
 
 
