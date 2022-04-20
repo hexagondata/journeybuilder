@@ -97,8 +97,8 @@ if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
         console.log("nombre",inArguments[2])
         logData(req);
         console.log("inicia post")
-        stringData = '{"type":"kkpremiososcars2022","users":[{"phone":"+521"'+inArguments[2].Nombre+',"params":{"PROMOCION":'+inArguments[0].Promocion+'}}]})'
-        console.log(stringData)
+        var stringData = '{"type":"kkpremiososcars2022","users":[{"phone":"+521"'+inArguments[2].Nombre+',"params":{"PROMOCION":'+inArguments[0].Promocion+'}}]})'
+        console.log("stringData----->",stringData)
         axios.defaults.headers = {
         'Content-Type': 'application/json',
         Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
