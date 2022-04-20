@@ -97,18 +97,18 @@ decoded in arguments
         logData(req);
         console.log("inicia post")
         console.log("{{Event.DEAudience-46508215-9a48-2824-aa14-2786f1b9a872.\"Phone\"}}")
-        // axios.defaults.headers = {
-        // 'Content-Type': 'application/json',
-        // Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
-        // }
-        // axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
-        // {"type":"kkpremiososcars2022","users":[{"phone":inArguments.Phone2,"params":{"PROMOCION":inArguments.Promocion}}]})
-        // .then(response => {
-        // console.log('Response', response.data)
-        // })
-        // .catch(e => {
-        // console.log('Error: ', e.response.data)
-        // })
+        axios.defaults.headers = {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
+        }
+        axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
+        {"type":"kkpremiososcars2022","users":[{"phone":inArguments.Phone2,"params":{"PROMOCION":inArguments.Promocion}}]})
+        .then(response => {
+        console.log('Response', response.data)
+        })
+        .catch(e => {
+        console.log('Error: ', e.response.data)
+        })
 
         //enviarMensaje('kkpremiososcars2022',inArguments.Phone,inArguments.Promocion);
 
