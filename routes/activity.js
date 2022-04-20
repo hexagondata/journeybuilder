@@ -106,7 +106,6 @@ if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
         axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
         // {"type":"kkpremiososcars2022","users":[{"phone":+"+521"+inArguments[2].Nombre,"params":{"PROMOCION":inArguments[0].Promocion}}]}
         stringData)
-        
         .then(response => {
         console.log('Response', response.data)
         })
