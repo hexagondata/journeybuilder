@@ -70,16 +70,30 @@
     "schema": {
         "arguments": {
             "execute": {
-                "inArguments": [
-                  {
-                    "message": {
-                        "dataType": "String",
-                        "isNullable": false,
-                        "direction": "out"
-                    }
+              "inArguments": [  
+                {
+                "Promocion": {
+                  "dataType": "String",
+                  "isNullable": false,
+                  "direction": "out"   
                 }
-                ],
-                "outArguments": []
+
+                },
+                {
+                  "Phone": {
+                    "dataType": "String",
+                    "isNullable": false,
+                    "direction": "out"   
+                  }
+                  },
+                  {
+                    "Nombre": {
+                      "dataType": "String",
+                      "isNullable": false,
+                      "direction": "out"   
+                    }
+                    }],
+            "outArguments": []
             }
         }
     }
