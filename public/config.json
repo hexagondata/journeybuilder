@@ -18,13 +18,13 @@
       "execute": {
          "inArguments":[
            {
-             "Promocion":"{{Contact.Key}}"
+             "Promocion":"{{Event.DEAudience-46508215-9a48-2824-aa14-2786f1b9a872.\"Promocion\"}}"
            },
            {
-             "Phone":"{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
+             "Phone":"{{Event.DEAudience-46508215-9a48-2824-aa14-2786f1b9a872.\"Phone\"}}"
            },
            {
-             "Nombre":"{{Event.DEAudience-46508215-9a48-2824-aa14-2786f1b9a872.\"Phone\"}}"
+             "Nombre":"{{Contact.Key}}"
            }
 
          ],
