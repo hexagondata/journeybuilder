@@ -91,7 +91,7 @@ return res.status(401).end();
 }
 console.log("decoded",decoded)
 if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-        var inArguments = decoded.inArguments[0];
+        var inArguments = decoded.inArguments;
         console.log("arguments",inArguments)
         logData(req);
         console.log("inicia post")
