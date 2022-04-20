@@ -97,15 +97,16 @@ if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
         console.log("nombre",inArguments[2])
         logData(req);
         console.log("inicia post")
-        var stringData = '{"type":"kkpremiososcars2022","users":[{"phone":"+521"'+inArguments[2].Nombre+',"params":{"PROMOCION":'+inArguments[0].Promocion+'}}]})'
+        var stringData = '{"type":"kkpremiososcars2022","users":[{"phone":"+521"'+inArguments[2].Nombre+',"params":{"PROMOCION":'+inArguments[0].Promocion+'}}]}'
         console.log("stringData----->",stringData)
         axios.defaults.headers = {
         'Content-Type': 'application/json',
         Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
         }
         axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
-        // {"type":"kkpremiososcars2022","users":[{"phone":+"+521"+inArguments[2].Nombre,"params":{"PROMOCION":inArguments[0].Promocion}}]})
-        stringData
+        // {"type":"kkpremiososcars2022","users":[{"phone":+"+521"+inArguments[2].Nombre,"params":{"PROMOCION":inArguments[0].Promocion}}]}
+        stringData)
+        
         .then(response => {
         console.log('Response', response.data)
         })
