@@ -72,7 +72,9 @@ exports.execute = function (req, res) {
 console.log("resbody----->",res.body)
 console.log("reqbody----->",req.body)
 
-
+console.log("contact","{{Contact.Key}}")
+console.log("contact2","{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}")
+console.log("contact3","{{InteractionDefaults.MobileNumber}}")
 // console.log("response",res)
 // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 // // verification error -> unauthorized request
