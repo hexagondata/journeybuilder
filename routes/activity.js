@@ -95,11 +95,13 @@ if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
         console.log("promocion",inArguments[0])
         console.log("phone",inArguments[1])
         console.log("nombre",inArguments[2])
-        logData(req);
+ 
         console.log("inicia post")
 
-        var data = JSON.stringify({"type":"kkpremiososcars2022","users":[{"phone":inArguments[2].Promocion,"params":{"PROMOCION":inArguments[0].Nombre}}]});
-        
+        var data = {"type":"kkpremiososcars2022","users":[{"phone":inArguments[2].Promocion,"params":{"PROMOCION":inArguments[0].Nombre}}]};
+        console.log("data--->",data)
+        var datastring = JSON.stringify(data)
+        console.log("datastring--->", datastring)
         var config = {
           method: 'post',
           url: 'https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications',
@@ -107,9 +109,9 @@ if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE', 
             'Content-Type': 'application/json'
           },
-          data : data
+          data : datastring
         };
-        
+        logData(req);
         axios(config)
         .then(function (response) {
           console.log(JSON.stringify(response.data));
