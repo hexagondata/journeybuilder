@@ -92,16 +92,17 @@ return res.status(401).end();
 console.log("decoded",decoded)
 if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
         var inArguments = decoded.inArguments;
-        console.log("arguments",inArguments)
+        console.log("arguments",inArguments[0])
+        console.log("arguments",inArguments[1])
+        console.log("arguments",inArguments[2])
         logData(req);
         console.log("inicia post")
-        console.log("{{Event.DEAudience-46508215-9a48-2824-aa14-2786f1b9a872.\"Phone\"}}")
         axios.defaults.headers = {
         'Content-Type': 'application/json',
         Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
         }
         axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
-        {"type":"kkpremiososcars2022","users":[{"phone":+"+52"+inArguments.Nombre,"params":{"PROMOCION":inArguments.Promocion}}]})
+        {"type":"kkpremiososcars2022","users":[{"phone":inArguments.Nombre,"params":{"PROMOCION":inArguments.Promocion}}]})
         .then(response => {
         console.log('Response', response.data)
         })
