@@ -75,6 +75,8 @@ console.log("reqbody----->",req)
 console.log("payload-> con Promocion",payload['arguments'].execute.inArguments[0].Promocion);
 console.log("payload--> con Phone",payload['arguments'].execute.inArguments[1].Phone);
 console.log("payload---> con Nombre",payload['arguments'].execute.inArguments[2].Nombre);
+console.log("nombre", payload.Nombre)
+
 // console.log("response",res)
 // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 // // verification error -> unauthorized request
