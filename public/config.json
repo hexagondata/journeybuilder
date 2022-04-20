@@ -21,7 +21,7 @@
              "Promocion":"{{Contact.Key}}"
            },
            {
-             "Phone":"{{Contact.Key}}"
+             "Phone":"{{Contact.Attribute.chatbotCustomers.Phone2}}"
            },
            {
              "Nombre":"{{Contact.Key}}"

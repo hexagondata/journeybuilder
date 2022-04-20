@@ -101,7 +101,7 @@ define([
             'Promocion': "{{Contact.Key}}"
         },
         {
-            'Phone': "{{InteractionDefaults.MobileNumber}}"
+            'Phone': "{{Contact.Attribute.chatbotCustomers.Phone2}}"
         },
         {
             'Nombre': "{{InteractionDefaults.Name}}"
