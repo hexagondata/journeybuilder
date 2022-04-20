@@ -69,13 +69,13 @@ res.send(200, 'Save');
 
 exports.execute = function (req, res) {
 // example on how to decode JWT
-
-var Contact = "{{Contact.key}}"
-console.log("contact",Contact)
-var Contact2 = "{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
-console.log("contact2",Contact2)
-var mobile = "{{InteractionDefaults.MobileNumber}}"
-console.log("contact3",mobile)
+console.log("payload",payload)
+// var Contact = "{{Contact.key}}"
+// console.log("contact",Contact)
+// var Contact2 = "{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
+// console.log("contact2",Contact2)
+// var mobile = "{{InteractionDefaults.MobileNumber}}"
+// console.log("contact3",mobile)
 // console.log("response",res)
 // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 // // verification error -> unauthorized request
