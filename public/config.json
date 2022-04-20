@@ -18,17 +18,17 @@
         "execute": {
           "inArguments": [
             {
-                "to": "{{InteractionDefaults.MobileNumber}}",
+                "to": "InteractionDefaults.MobileNumber",
                 "message": "This is a SMS ",
                 "sender": "Krispy",
-                "emailAddress": "{{InteractionDefaults.Email}}"
+                "emailAddress": "InteractionDefaults.Email"
             }
         ],
 
           "outArguments": [],
           "url": "https://sfmc-custom-activity-hexagon.herokuapp.com/execute",
            "verb": "POST",
-            "useJwt": false,
+            "useJwt": true,
             "format":"json",
             "timeout": 10000
         }
@@ -37,22 +37,22 @@
       "save": {
         "url": "https://sfmc-custom-activity-hexagon.herokuapp.com/save",
           "verb": "POST",
-        "useJwt": true
+        "useJwt": false
        },
        "publish": {
         "url": "https://sfmc-custom-activity-hexagon.herokuapp.com/publish",
            "verb": "POST",
-        "useJwt": true
+        "useJwt": false
        },
       "stop": {
         "url": "https://sfmc-custom-activity-hexagon.herokuapp.com/stop",
            "verb": "POST",
-        "useJwt": true
+        "useJwt": false
       },
       "validate": {
         "url": "https://sfmc-custom-activity-hexagon.herokuapp.com/validate",
         "verb": "POST",
-        "useJwt": true
+        "useJwt": false
       }
     },
     "wizardSteps": [
