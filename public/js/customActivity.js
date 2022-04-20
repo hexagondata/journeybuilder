@@ -48,7 +48,6 @@ define([
 
     function initialize(data) {
         console.log("dataArguments-->",data.arguments);
-
         if (data) {
             payload = data;
         }
@@ -76,8 +75,6 @@ define([
             text: 'done',
             visible: true
         });
-
-
     }
 
     function onGetTokens(tokens) {
@@ -96,25 +93,19 @@ define([
         console.log("payloadAntes--> con Promocion",payload['arguments'].execute.inArguments[0].Promocion);
         console.log("payloadAntes--> con Phone",payload['arguments'].execute.inArguments[1].Phone);
         console.log("payloadAntes--> con Nombre",payload['arguments'].execute.inArguments[2].Nombre);
-
-        connection.on('requestedSchema', function (data) {
-            // save schema
-            console.log('*** Schema ***', JSON.stringify(data['schema']));
-         });
-
         //payload['arguments'].execute.inArguments = [{
         //    "tokens": authTokens
         //}];
         
-        // payload['arguments'].execute.inArguments = [{
-        //     'Promocion': payload['arguments'].execute.inArguments[0].Promocion
-        // },
-        // {
-        //     'Phone': payload['arguments'].execute.inArguments[1].Phone
-        // },
-        // {
-        //     'Nombre': payload['arguments'].execute.inArguments[2].Nombre
-        // }];
+        payload['arguments'].execute.inArguments = [{
+            'Promocion': "{{Contact.key}}"
+        },
+        {
+            'Phone': "{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
+        },
+        {
+            'Nombre': "{{InteractionDefaults.MobileNumber}}"
+        }];
 
 
         payload['metaData'].isConfigured = true;
