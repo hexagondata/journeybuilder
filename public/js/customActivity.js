@@ -90,7 +90,9 @@ define([
         // var postcardURLValue = $('#postcard-url').val();
         // var postcardTextValue = $('#postcard-text').val();
         console.log("entro a save")
-        console.log("payloadAntes-->",payload['arguments'].execute.inArguments.length);
+        console.log("payloadAntes--> con Teléfono",payload['arguments'].execute.inArguments.Phone);
+        console.log("payloadAntes--> con Nombre",payload['arguments'].execute.inArguments.Nombre);
+        console.log("payloadAntes--> con Promoción",payload['arguments'].execute.inArguments.Promocion);
         //payload['arguments'].execute.inArguments = [{
         //    "tokens": authTokens
         //}];
