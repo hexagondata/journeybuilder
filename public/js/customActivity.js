@@ -111,7 +111,7 @@ define([
             // save schema
             console.log('*** Schema ***', JSON.stringify(data['schema']));
          });
-         
+         console.log("schema--->")
          
         payload['metaData'].isConfigured = true;
 
