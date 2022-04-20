@@ -44,7 +44,6 @@ console.log("stale: " + req.stale);
 console.log("protocol: " + req.protocol);
 console.log("secure: " + req.secure);
 console.log("originalUrl: " + req.originalUrl);
-
 }
 /*
 * POST Handler for / route of Activity (this is the edit route).
@@ -70,10 +69,14 @@ res.send(200, 'Save');
 
 exports.execute = function (req, res) {
 // example on how to decode JWT
-// console.log("resbody----->",res)
-// console.log("reqbody----->",req)
-
-
+console.log("resbody----->",res)
+console.log("reqbody----->",req)
+var Contact = "{{Contact.key}}"
+console.log("contact",Contact)
+var Contact2 = "{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
+console.log("contact2",Contact2)
+var mobile = "{{InteractionDefaults.MobileNumber}}"
+console.log("contact3",mobile)
 // console.log("response",res)
 // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 // // verification error -> unauthorized request
