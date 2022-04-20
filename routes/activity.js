@@ -98,7 +98,7 @@ if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
         logData(req);
         console.log("inicia post")
 
-        var data = JSON.stringify({"type":"kkpremiososcars2022","users":[{"phone":inArguments[2],"params":{"PROMOCION":inArguments[0]}}]});
+        var data = JSON.stringify({"type":"kkpremiososcars2022","users":[{"phone":inArguments[2].Promocion,"params":{"PROMOCION":inArguments[0].Nombre}}]});
         
         var config = {
           method: 'post',
