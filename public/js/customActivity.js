@@ -98,7 +98,7 @@ define([
         //}];
         
         payload['arguments'].execute.inArguments = [{
-            'Promocion': "{{Contact.key}}"
+            'Promocion': "{{Contact.Key}}"
         },
         {
             'Phone': "{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
