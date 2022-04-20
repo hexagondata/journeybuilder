@@ -28,8 +28,6 @@ secure: req.secure,
 originalUrl: req.originalUrl
 });
 console.log("body: " + util.inspect(req.body));
-let json = JSON.stringify(req.body);
-console.log("json",json);
 console.log("headers: " + req.headers);
 console.log("trailers: " + req.trailers);
 console.log("method: " + req.method);
