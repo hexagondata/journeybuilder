@@ -13,9 +13,9 @@ define([
     connection.on('initActivity', initialize);
     connection.on('requestedTokens', onGetTokens);
     connection.on('requestedEndpoints', onGetEndpoints);
-    // connection.on('requestedInteraction', onRequestedInteraction);
-    // connection.on('requestedTriggerEventDefinition', onRequestedTriggerEventDefinition);
-    // connection.on('requestedDataSources', onRequestedDataSources);
+    connection.on('requestedInteraction', onRequestedInteraction);
+    connection.on('requestedTriggerEventDefinition', onRequestedTriggerEventDefinition);
+    connection.on('requestedDataSources', onRequestedDataSources);
 
     connection.on('clickedNext', save);
    
@@ -25,9 +25,9 @@ define([
         connection.trigger('requestSchema');
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
-        // connection.trigger('requestInteraction');
-        // connection.trigger('requestTriggerEventDefinition');
-        // connection.trigger('requestDataSources');  
+        connection.trigger('requestInteraction');
+        connection.trigger('requestTriggerEventDefinition');
+        connection.trigger('requestDataSources');  
 
     }
 
@@ -107,11 +107,7 @@ define([
             'Nombre': "{{InteractionDefaults.MobileNumber}}"
         }];
 
-        connection.on('requestedSchema', function (data) {
-            // save schema
-            console.log('*** Schema ***', JSON.stringify(data['schema']));
-         });
-         console.log("schema--->")
+
          
         payload['metaData'].isConfigured = true;
 
