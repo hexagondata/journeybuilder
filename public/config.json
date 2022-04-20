@@ -15,16 +15,18 @@
         }
     },
     "arguments": {
-        "execute": {
-          "inArguments": [
-            {
-                "to": "InteractionDefaults.MobileNumber",
-                "message": "This is a SMS ",
-                "sender": "Krispy",
-                "emailAddress": "InteractionDefaults.Email"
-            }
-        ],
-
+      "execute": {
+         "inArguments":[
+           {
+             "Promocion":"2x1"
+           },
+           {
+             "Phone":"+525545883023"
+           },
+           {
+             "Nombre":"eduardo silve"
+           }
+          ],
           "outArguments": [],
           "url": "https://sfmc-custom-activity-hexagon.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
