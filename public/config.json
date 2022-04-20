@@ -9,8 +9,8 @@
     "type": "REST",
     "lang": {
         "en-US": {
-            "name": "Journey Builder",
-          "description": "custom Journey Builder",
+            "name": "Yalo Activity",
+          "description": "Yalo Activity",
           "step1Label": "Configure Activity"
         }
     },
