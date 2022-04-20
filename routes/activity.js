@@ -69,7 +69,7 @@ res.send(200, 'Save');
 
 exports.execute = function (req, res) {
 // example on how to decode JWT
-console.log("payload",payload)
+// console.log("payload",payload)
 // var Contact = "{{Contact.key}}"
 // console.log("contact",Contact)
 // var Contact2 = "{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
