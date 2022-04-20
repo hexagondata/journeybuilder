@@ -1,6 +1,6 @@
 {
   "workflowApiVersion": "1.1",
-  "key" : "85d04ab7-e546-4a53-b862-ca3831aed734",
+  "key" : "1bb14dae-f1bc-48f0-af48-1975ff15ce2c",
   "metaData": {
       "icon": "images/icon.png",
       "iconSmall": "images/iconSmall.png",
@@ -37,6 +37,7 @@
       }
   },
   "configurationArguments": {
+    "applicationExtensionKey": "1bb14dae-f1bc-48f0-af48-1975ff15ce2c",
     "save": {
       "url": "https://sfmc-custom-activity-hexagon.herokuapp.com/journeybuilder/save",
         "verb": "POST",
