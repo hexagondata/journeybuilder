@@ -21,10 +21,10 @@
              "Promocion":"2x1"
            },
            {
-             "Phone":"+525545883023"
+             "Phone":"{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
            },
            {
-             "Nombre":"eduardo silve"
+             "Nombre":"{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
            }
 
          ],
