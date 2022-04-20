@@ -98,13 +98,13 @@ define([
         //}];
         
         payload['arguments'].execute.inArguments = [{
-            'Promocion': "{{Contact.key}}"
+            'Promocion': payload['arguments'].execute.inArguments[0].Promocion
         },
         {
-            'Phone': "{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
+            'Phone': payload['arguments'].execute.inArguments[1].Phone
         },
         {
-            'Nombre': "{{InteractionDefaults.MobileNumber}}"
+            'Nombre': payload['arguments'].execute.inArguments[2].Nombre
         }];
 
 
