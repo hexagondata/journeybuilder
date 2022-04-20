@@ -69,8 +69,8 @@ res.send(200, 'Save');
 
 exports.execute = function (req, res) {
 // example on how to decode JWT
-console.log("resbody----->",res)
-console.log("reqbody----->",req)
+// console.log("resbody----->",res)
+// console.log("reqbody----->",req)
 
 console.log("payload-> con Promocion",payload['arguments'].execute.inArguments[0].Promocion);
 console.log("payload--> con Phone",payload['arguments'].execute.inArguments[1].Phone);
