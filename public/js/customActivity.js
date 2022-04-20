@@ -98,13 +98,13 @@ define([
         //}];
         
         payload['arguments'].execute.inArguments = [{
-            'Promocion': "{{Contact.Key}}"
+            'Promocion': "{{Contact.Attribute.chatbotCustomers.Promocion}}"
         },
         {
             'Phone': "{{Contact.Attribute.chatbotCustomers.Phone2}}"
         },
         {
-            'Nombre': "{{InteractionDefaults.Name}}"
+            'Nombre': "{{InteractionDefaults.Nombre}}"
         }];
 
 

@@ -18,13 +18,13 @@
       "execute": {
          "inArguments":[
            {
-             "Promocion":"{{Contact.Key}}"
+             "Promocion":"{{Contact.Attribute.chatbotCustomers.Promocion}}"
            },
            {
              "Phone":"{{Contact.Attribute.chatbotCustomers.Phone2}}"
            },
            {
-             "Nombre":"{{Contact.Key}}"
+             "Nombre":"{{Contact.Attribute.chatbotCustomers.Nombre}}"
            }
 
          ],
