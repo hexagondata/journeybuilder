@@ -21,7 +21,7 @@
                "Promocion":"2x1"
              },
              {
-               "Phone":"+525545883023"
+               "Phone": "{{InteractionDefaults.MobileNumber}}"
              },
              {
                "Nombre":"eduardo silve"
