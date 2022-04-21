@@ -71,57 +71,41 @@ exports.execute = function (req, res) {
 console.log("reqbody -->", req.body);
 // example on how to decode JWT
 
-// var Contact = "{{Contact.key}}"
-// console.log("contact",Contact)
-// var Contact2 = "{{Contact.Attribute.Master_de_clientes_Krispy_Kreme.DXPHONENUMBER}}"
-// console.log("contact2",Contact2)
-// var mobile = "{{InteractionDefaults.MobileNumber}}"
-// console.log("contact3",mobile)
-// console.log("response",res)
 console.log("EXECUTE HAS BEEN RUN");
 console.log('KEY - > ' + process.env.jwtSecret);
 
 
 JWT(req.body, process.env.jwtSecret, (err, decoded) => {
-// verification error -> unauthorized request
-console.log("entro a token")
-if (err) {
-console.error(err);
-return res.status(401).end();
-}
-console.log("decoded",decoded)
-if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-        var inArguments = decoded.inArguments;
-        console.log("promocion",inArguments[0])
-        console.log("phone",inArguments[1])
-        console.log("nombre",inArguments[2])
-        logData(req);
-        console.log("inicia post")
-        var stringData = '{"type":"kkpremiososcars2022","users":[{"phone":"'+inArguments[1].Phone+'","params":{"PROMOCION":"'+inArguments[0].Promocion+'"}}]}'
-        console.log("stringData----->",stringData)
-        axios.defaults.headers = {
-        'Content-Type': 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
+
+        if (err) {
+        console.error(err);
+        return res.status(401).end();
         }
-        axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications' , 
-        // {"type":"kkpremiososcars2022","users":[{"phone":+"+521"+inArguments[2].Nombre,"params":{"PROMOCION":inArguments[0].Promocion}}]}
-        stringData)
-        .then(response => {
-        console.log('Response', response.data)
-        })
-        .catch(e => {
-        console.log('Error: ', e.response.data)
-        })
+        console.log("decoded",decoded)
+        if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
+                var inArguments = decoded.inArguments;
+                logData(req);
+                var stringData = '{"type":"kkpremiososcars2022","users":[{"phone":"'+inArguments[1].Phone+'","params":{"PROMOCION":"'+inArguments[0].Promocion+'"}}]}'
+                console.log("stringData----->",stringData)
+                axios.defaults.headers = {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUNUtNbHBiSGpKQ2RQSUtmdFZ5SUJBem5IUEllcThyMCJ9.EDZ45MU8V6tlEvAv1KAZeLtAwRSJgSg2bo5VzwNzdRE'
+                }
+                axios.post('https://api-global.yalochat.com/notifications/api/v1/accounts/krispy-kreme-wa-mx/bots/krispy-kreme-wa-mx/notifications',
+                stringData)
+                .then(response => {
+                console.log('Response', response.data)
+                })
+                .catch(e => {
+                console.log('Error: ', e.response.data)
+                })
 
-        //enviarMensaje('kkpremiososcars2022',inArguments.Phone,inArguments.Promocion);
 
-        //KRISP
-
-        res.send(200, 'Execute');
-} else {
-        console.error('inArguments invalid.');
-        return res.status(400).end();
-        }
+                res.send(200, 'Execute');
+        } else {
+                console.error('inArguments invalid.');
+                return res.status(400).end();
+                }
         });
 };
 /*
